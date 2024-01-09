@@ -14,14 +14,14 @@ const CartWidget = () => {
       </li>
       <li>
         <input id="menu-derecha" type="checkbox"></input>
-        <label for="menu-derecha">
+        <label htmlFor="menu-derecha">
           < MenuIcon className='menu-icono-derecha' />
         </label>
-        <nav class="lista-sub-menu">
+        <nav className="lista-sub-menu">
           <ul>
-            <li><a class="link-sub-menu" href="../public/index.html">Inicio<span>👈</span></a></li>
-            <li><a class="link-sub-menu" href="../public/index.html">Nuevos productos<span>👈</span></a></li>
-            <li><a class="link-sub-menu" href="../public/index.html">Popular<span>👈</span></a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Inicio<span>👈</span></a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Nuevos productos<span>👈</span></a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Popular<span>👈</span></a></li>
           </ul>
         </nav>
       </li>

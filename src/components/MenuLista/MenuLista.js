@@ -5,7 +5,7 @@ const MenuLista = () => {
   return (
     <div className='contenedor-menu-icono'>
       <input id="menu-izquierda" type="checkbox" />
-        <label for="menu-izquierda">
+        <label htmlFor="menu-izquierda">
             <ListIcon className='menu-icono-izquierda'/>
         </label>
     </div>
