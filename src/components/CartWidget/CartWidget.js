@@ -1,5 +1,5 @@
 import './cartWidget.css';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
@@ -7,21 +7,21 @@ const CartWidget = () => {
   return (
     <ul className='lista-dos'>
       <li>
-        <a href='../public/index.html'>
-          <ShoppingCartIcon className='logo-carrito' />
+        <a className='contenedor-logo-carrito' href='../public/index.html'>
+          <ShoppingBasketIcon className='logo-carrito' />
           <span>0</span>
         </a>
       </li>
-      <li>
+      <li className='sub-menu-inicio'>
         <input id="menu-derecha" type="checkbox"></input>
         <label htmlFor="menu-derecha">
           < MenuIcon className='menu-icono-derecha' />
         </label>
         <nav className="lista-sub-menu">
           <ul>
-            <li><a className="link-sub-menu" href="../public/index.html">Inicio<span>👈</span></a></li>
-            <li><a className="link-sub-menu" href="../public/index.html">Nuevos productos<span>👈</span></a></li>
-            <li><a className="link-sub-menu" href="../public/index.html">Popular<span>👈</span></a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Nuevos productos</a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Popular</a></li>
+            <li><a className="link-sub-menu" href="../public/index.html">Consultas</a></li>
           </ul>
         </nav>
       </li>
