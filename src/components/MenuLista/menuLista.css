@@ -2,17 +2,17 @@
     display: none;
   }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .nav-icon-5{
         width: 35px;
         height: 30px;
-        margin: 10px 10px;
+        margin: 10px 2rem;
         position: relative;
         cursor: pointer;
         display: inline-block;
       }
       .nav-icon-5 span{
-        background-color:#fff;
+        background-color:rgb(245, 245, 245);
         position: absolute;
         border-radius: 2px;
         transition: .3s cubic-bezier(.8, .5, .2, 1.4);

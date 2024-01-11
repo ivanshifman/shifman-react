@@ -55,3 +55,67 @@
     color: rgba(191, 34, 34, 0.929);
 }
 
+@media (max-width: 1000px) {
+    .lista-uno {
+        position: sticky;
+        order: -1;
+        flex-direction: column;
+        position: absolute;
+        top: 105px;
+        left: -10px;
+        background-color: rgba(230, 18, 18, 0.919);
+        box-shadow: 0 0 15px 10px rgba(191, 34, 34, 0.929);
+        width: 50vw;
+        height: 100vh;
+        border-top: 2px solid rgba(222, 250, 248, 0.929);
+        border-right: 2px solid rgba(222, 250, 248, 0.929);
+        border-top-right-radius: 2rem;
+        transition: all .3s ease;
+        z-index: 10;
+        transform: translate(-100%);
+    }
+
+    .lista-uno.active {
+        transform: translate(0%);
+    }
+
+    .lista-uno li {
+        margin-bottom: 2.5rem;
+        width: 100%;
+    }
+
+    .lista-uno li a {
+        font-size: 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+
+    .lista-uno li a span {
+        font-size: 2rem;
+        padding: 10px 10px;
+    }
+
+    .navegacion {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 700px) {
+    .lista-uno {
+        width: 70vw;
+    }
+
+    .lista-uno li a {
+        font-size: 1.5rem;
+        padding: 8px 10px;
+    }
+
+    .lista-uno li a span {
+        font-size: 1.5rem;
+        padding: 8px 10px;
+    }
+}

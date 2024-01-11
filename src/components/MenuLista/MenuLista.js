@@ -1,8 +1,8 @@
 import './menuLista.css';
 
-const MenuLista = () => {
+const MenuLista = ({ show, handleClick }) => {
   return (
-    <div className="icon nav-icon-5">
+    <div onClick={handleClick} className={`icon nav-icon-5 ${show ? 'open' : ""}`}>
       <span></span>
       <span></span>
       <span></span>

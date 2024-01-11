@@ -3,7 +3,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-const CartWidget = () => {
+const CartWidget = ({ showCartWidget, handleCartWidgetClick }) => {
   return (
     <ul className='lista-dos'>
       <li>
@@ -15,13 +15,13 @@ const CartWidget = () => {
       <li className='sub-menu-inicio'>
         <input id="menu-derecha" type="checkbox"></input>
         <label htmlFor="menu-derecha">
-          < MenuIcon className='menu-icono-derecha' />
+          < MenuIcon onClick={handleCartWidgetClick} className='menu-icono-derecha' />
         </label>
-        <nav className="lista-sub-menu">
+        <nav className={`lista-sub-menu ${showCartWidget ? 'active' : ""}`}>
           <ul>
-            <li><a className="link-sub-menu" href="../public/index.html">Nuevos productos</a></li>
-            <li><a className="link-sub-menu" href="../public/index.html">Popular</a></li>
-            <li><a className="link-sub-menu" href="../public/index.html">Consultas</a></li>
+            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Nuevos productos</a></li>
+            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Popular</a></li>
+            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Consultas</a></li>
           </ul>
         </nav>
       </li>
