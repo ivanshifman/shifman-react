@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <header>
       <nav className='navegacion'>
-        <MenuLista show = {show} handleClick = {handleClick} />
+        <MenuLista show={show} handleClick={handleClick} />
         <a href='../public/index.html' className='logo-contenedor'>
           <img className='logo' src={logo} alt="logo" />
         </a>
@@ -36,7 +36,7 @@ const NavBar = () => {
           <li><a href='../public/index.html'><span><ComputerIcon /></span>Equipos</a></li>
           <li><a href='../public/index.html'><span><VideogameAssetIcon /></span>Videojuegos</a></li>
         </ul>
-        <CartWidget showCartWidget = {showCartWidget} handleCartWidgetClick = {handleCartWidgetClick}/>
+        <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
       </nav>
     </header>
 

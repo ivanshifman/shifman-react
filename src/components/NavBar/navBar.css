@@ -36,7 +36,8 @@
     padding: 0 20px;
 }
 
-.lista-uno li a, .lista-uno li a span {
+.lista-uno li a,
+.lista-uno li a span {
     color: rgb(245, 245, 245);
     font-size: 1.2rem;
     font-weight: 800;
@@ -50,7 +51,8 @@
     align-items: center;
 }
 
-.lista-uno li a:hover, .lista-uno li a:hover span {
+.lista-uno li a:hover,
+.lista-uno li a:hover span {
     background-color: rgb(245, 245, 245);
     color: rgba(191, 34, 34, 0.929);
 }
