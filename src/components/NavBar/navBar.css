@@ -57,20 +57,24 @@
     color: rgba(191, 34, 34, 0.929);
 }
 
+.lista-uno li a:hover span {
+    background-color: transparent;
+}
+
 @media (max-width: 1000px) {
     .lista-uno {
         position: sticky;
         order: -1;
         flex-direction: column;
         position: absolute;
-        top: 105px;
+        top: 85px;
         left: -10px;
         background-color: rgba(230, 18, 18, 0.919);
         box-shadow: 0 0 15px 10px rgba(191, 34, 34, 0.929);
         width: 50vw;
         height: 100vh;
-        border-top: 2px solid rgba(222, 250, 248, 0.929);
-        border-right: 2px solid rgba(222, 250, 248, 0.929);
+        border-top: 3px solid rgba(222, 250, 248, 0.929);
+        border-right: 3px solid rgba(222, 250, 248, 0.929);
         border-top-right-radius: 2rem;
         transition: all .3s ease;
         z-index: 10;
@@ -111,11 +115,7 @@
         width: 70vw;
     }
 
-    .lista-uno li a {
-        font-size: 1.5rem;
-        padding: 8px 10px;
-    }
-
+    .lista-uno li a,
     .lista-uno li a span {
         font-size: 1.5rem;
         padding: 8px 10px;

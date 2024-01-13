@@ -31,15 +31,14 @@ const NavBar = () => {
           <img className='logo' src={logo} alt="logo" />
         </a>
         <ul className={`lista-uno ${show ? 'active' : ""}`}>
-          <li><a href='../public/index.html'><span><HomeIcon /></span>Inicio</a></li>
-          <li><a href='../public/index.html'><span><HeadsetIcon /></span>Accesorios</a></li>
-          <li><a href='../public/index.html'><span><ComputerIcon /></span>Equipos</a></li>
-          <li><a href='../public/index.html'><span><VideogameAssetIcon /></span>Videojuegos</a></li>
+          <li><a onClick={handleClick} href='../public/index.html'><span><HomeIcon /></span>Inicio</a></li>
+          <li><a onClick={handleClick} href='../public/index.html'><span><HeadsetIcon /></span>Accesorios</a></li>
+          <li><a onClick={handleClick} href='../public/index.html'><span><ComputerIcon /></span>Equipos</a></li>
+          <li><a onClick={handleClick} href='../public/index.html'><span><VideogameAssetIcon /></span>Videojuegos</a></li>
         </ul>
         <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
       </nav>
     </header>
-
   )
 }
 
