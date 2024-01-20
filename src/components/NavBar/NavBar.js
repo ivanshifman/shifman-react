@@ -38,6 +38,10 @@ const NavBar = () => {
         </ul>
         <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
       </nav>
+
+      {show && (
+        <div className='menu-overlay'></div>
+      )}
     </header>
   )
 }
