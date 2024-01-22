@@ -132,3 +132,13 @@
         padding: 8px 10px;
     }
 }
+
+@media (max-width: 468px) {
+    .lista-uno {
+        width: 95vw;
+    }
+
+    .lista-uno li {
+        margin-bottom: 3rem;
+    }
+}

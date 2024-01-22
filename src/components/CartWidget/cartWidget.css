@@ -105,3 +105,9 @@
         margin-right: 2rem;
     }
 }
+
+@media (max-width:468px) {
+    .lista-dos {
+        margin-right: .6rem;
+    }
+}
