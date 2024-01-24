@@ -80,7 +80,7 @@
     width: 100%;
 }
 
-.lista-sub-menu ul li a {
+.lista-sub-menu ul li .link-sub-menu {
     text-align: left;
     height: auto;
     display: block;
@@ -96,7 +96,7 @@
     border-radius: .5rem;
 }
 
-.lista-sub-menu ul li a:hover {
+.lista-sub-menu ul li .link-sub-menu:hover {
     background-color: rgba(148, 8, 8, 0.595);
 }
 
