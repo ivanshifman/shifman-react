@@ -1,71 +1,23 @@
 import './itemListContainer.css';
-import UnoImg from '../../assets/acer1a.webp'
+import { pedirDatos } from '../../utils/promiseUtils'
+import ItemList from '../ItemList/ItemList';
+import { useEffect, useState } from 'react';
 
 const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+        pedirDatos()
+            .then((res) => {
+                setProductos(res)
+            })
+    }, [])
+
+
     return (
         <>
-            <div className='contenedor-total-productos'>
-                <div className='productos'>
-                    <h2>Productos</h2>
-
-                    <div className='producto-contenido'>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                        <article className='producto'>
-                            <img src={UnoImg} alt='altimg'></img>
-                            <div className='producto-texto'>
-                                <h3>notebook ksksk sjsjssk djdjdjdjd djddjdjdjdjdddddddd</h3>
-                                <p>Categoria: equipos</p>
-                                <p className='precio'>$2000</p>
-                                <a className='boton-producto' href='../public/index.html'>Ver detalles</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+            <ItemList productos={productos}/>
         </>
     )
 }
