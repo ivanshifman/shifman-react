@@ -73,7 +73,7 @@
         background-color: rgba(230, 18, 18, 0.919);
         box-shadow: 0 0 15px 10px rgba(191, 34, 34, 0.929);
         width: 50vw;
-        height: 100vh;
+        height: 100vh !important;
         border-top: 3px solid rgba(222, 250, 248, 0.929);
         border-right: 3px solid rgba(222, 250, 248, 0.929);
         border-top-right-radius: 2rem;
