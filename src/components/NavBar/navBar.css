@@ -58,7 +58,7 @@
 }
 
 .lista-uno li a:hover span {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
   
@@ -68,8 +68,9 @@
         order: -1;
         flex-direction: column;
         position: absolute;
-        top: 85px;
+        top: 75px;
         left: -10px;
+        overflow: hidden;
         background-color: rgba(230, 18, 18, 0.919);
         box-shadow: 0 0 15px 10px rgba(191, 34, 34, 0.929);
         width: 50vw;
