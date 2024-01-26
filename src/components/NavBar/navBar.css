@@ -116,6 +116,12 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .navegacion .logo-contenedor {
+        height: 55px;
+        width: 55px;
+        margin-top: 5px;
+    }
 }
 
 @media (max-width: 700px) {

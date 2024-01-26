@@ -4,13 +4,10 @@ import {useState, useEffect} from 'react'
 
 const ItemList = ({ productos, categoriaId }) => {
     const [showTitle, setShowTitle] = useState(false);
-    console.log(showTitle)
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowTitle(true);
-        }, 1000);
 
-        return () => clearTimeout(timer);
+    useEffect(() => {
+            setShowTitle(true);
+            console.log(categoriaId)
     }, [categoriaId]);
 
     return (

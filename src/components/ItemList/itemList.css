@@ -45,6 +45,11 @@ img {
 }
 
 @media (max-width: 468px) {
+
+    .productos {
+        padding-top: 2rem;
+    }
+
     .productos h2 {
         font-size: 30px;
     }
