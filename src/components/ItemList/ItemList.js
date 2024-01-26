@@ -7,7 +7,6 @@ const ItemList = ({ productos, categoriaId }) => {
 
     useEffect(() => {
             setShowTitle(true);
-            console.log(categoriaId)
     }, [categoriaId]);
 
     return (
