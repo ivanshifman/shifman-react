@@ -35,7 +35,7 @@ const NavBar = () => {
           <li><NavLink className='menu-link' onClick={handleClick} to={`/`}><span><HomeIcon /></span>Inicio</NavLink></li>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/accesorio`}><span><HeadsetIcon /></span>Accesorios</NavLink></li>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/equipos`}><span><ComputerIcon /></span>Equipos</NavLink></li>
-          <li><NavLink className='menu-link' onClick={handleClick} to={`/`}><span><LocalPhoneIcon /></span>Contacto</NavLink></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/contacto`}><span><LocalPhoneIcon /></span>Contacto</NavLink></li>
         </ul>
         <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
       </nav>

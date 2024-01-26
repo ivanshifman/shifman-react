@@ -24,7 +24,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <ItemList productos={productos}/>
+            <ItemList productos={productos} categoriaId={categoriaId}/>
         </>
     )
 }
