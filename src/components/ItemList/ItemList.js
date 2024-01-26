@@ -8,7 +8,7 @@ const ItemList = ({ productos }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowTitle(true);
-        }, 2000);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);

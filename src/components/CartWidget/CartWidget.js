@@ -1,16 +1,16 @@
 import './cartWidget.css';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { Link } from 'react-router-dom';
 
 const CartWidget = ({ showCartWidget, handleCartWidgetClick }) => {
   return (
     <ul className='lista-dos'>
       <li>
-        <a className='contenedor-logo-carrito' href='../public/index.html'>
+        <Link className='contenedor-logo-carrito' to={`/`}>
           <ShoppingBasketIcon className='logo-carrito' />
           <span>0</span>
-        </a>
+        </Link>
       </li>
       <li className='sub-menu-inicio'>
         <input id="menu-derecha" type="checkbox"></input>
@@ -19,9 +19,8 @@ const CartWidget = ({ showCartWidget, handleCartWidgetClick }) => {
         </label>
         <nav className={`lista-sub-menu ${showCartWidget ? 'active' : ""}`}>
           <ul>
-            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Nuevos productos</a></li>
-            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Popular</a></li>
-            <li><a onClick={handleCartWidgetClick} className="link-sub-menu" href="../public/index.html">Consultas</a></li>
+            <li><Link onClick={handleCartWidgetClick} className="link-sub-menu" to={`/`}>Productos</Link></li>
+            <li><Link onClick={handleCartWidgetClick} className="link-sub-menu" to={`/`}>Consultas</Link></li>
           </ul>
         </nav>
       </li>

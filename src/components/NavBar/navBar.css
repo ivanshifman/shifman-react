@@ -57,6 +57,12 @@
     color: rgba(191, 34, 34, 0.929);
 }
 
+.lista-uno li .menu-link.active,
+.lista-uno li .menu-link.active span {
+    background-color: rgb(245, 245, 245);
+    color: rgba(191, 34, 34, 0.929);
+}
+
 .lista-uno li a:hover span {
     background-color: transparent !important;
 }

@@ -7,6 +7,7 @@ import HeadsetIcon from '@mui/icons-material/Headset';
 import ComputerIcon from '@mui/icons-material/Computer';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -27,14 +28,14 @@ const NavBar = () => {
     <header>
       <nav className='navegacion'>
         <MenuLista show={show} handleClick={handleClick} />
-        <a href='../public/index.html' className='logo-contenedor'>
+        <Link to={`/`} className='logo-contenedor'>
           <img className='logo' src={logo} alt="logo" />
-        </a>
+        </Link>
         <ul className={`lista-uno ${show ? 'active' : ""}`}>
-          <li><a className='menu-link' onClick={handleClick} href='../public/index.html'><span><HomeIcon /></span>Inicio</a></li>
-          <li><a className='menu-link' onClick={handleClick} href='../public/index.html'><span><HeadsetIcon /></span>Accesorios</a></li>
-          <li><a className='menu-link' onClick={handleClick} href='../public/index.html'><span><ComputerIcon /></span>Equipos</a></li>
-          <li><a className='menu-link' onClick={handleClick} href='../public/index.html'><span><LocalPhoneIcon /></span>Contacto</a></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/`}><span><HomeIcon /></span>Inicio</NavLink></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/accesorio`}><span><HeadsetIcon /></span>Accesorios</NavLink></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/equipos`}><span><ComputerIcon /></span>Equipos</NavLink></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/`}><span><LocalPhoneIcon /></span>Contacto</NavLink></li>
         </ul>
         <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
       </nav>
