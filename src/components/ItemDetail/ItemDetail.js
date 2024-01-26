@@ -1,6 +1,10 @@
 import './itemDetail.css';
+import { useCount } from '../../hooks/useCount';
 
 const ItemDetail = ({ producto }) => {
+
+    const { incremento, decremento, numero } = useCount(0, 0, producto.stock)
+
     return (
         <>
             <article className='contenedor-imagenes'>
@@ -22,9 +26,9 @@ const ItemDetail = ({ producto }) => {
                 </div>
                 <div className='contenedor-cantidad'>
                     <div className='contador-producto'>
-                        <button className='boton-cantidad'><span>-</span></button>
-                        <span className='numero-producto'>0</span>
-                        <button className='boton-cantidad'><span>+</span></button>
+                        <button className='boton-cantidad' onClick={decremento}><span>-</span></button>
+                        <span className='numero-producto'>{numero}</span>
+                        <button className='boton-cantidad' onClick={incremento}><span>+</span></button>
                     </div>
                     <button className='boton-compra'><span>E</span>Agregar al carrito</button>
                 </div>

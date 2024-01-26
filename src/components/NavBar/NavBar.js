@@ -7,9 +7,12 @@ import HeadsetIcon from '@mui/icons-material/Headset';
 import ComputerIcon from '@mui/icons-material/Computer';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
+
+  const location = useLocation();
+  const isSubMenuInicioVisible = ['/', '/categoria/accesorio', '/categoria/equipos'].includes(location.pathname);
 
   const [show, setShow] = useState(false)
   const [showCartWidget, setShowCartWidget] = useState(false);
@@ -37,7 +40,7 @@ const NavBar = () => {
           <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/equipos`}><span><ComputerIcon /></span>Equipos</NavLink></li>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/contacto`}><span><LocalPhoneIcon /></span>Contacto</NavLink></li>
         </ul>
-        <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} />
+        <CartWidget showCartWidget={showCartWidget} handleCartWidgetClick={handleCartWidgetClick} isSubMenuInicioVisible={isSubMenuInicioVisible}/>
       </nav>
     </header>
   )

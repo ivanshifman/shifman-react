@@ -11,7 +11,7 @@ export const Spinner = ({ isLoading }) => {
     return (
         <div className='contenedor-spinner'>
             <BeatLoader
-                color="#910b0b"
+                color="rgba(230, 18, 18, 0.919)"
                 cssOverride={override}
                 loading={isLoading}
                 margin={2}

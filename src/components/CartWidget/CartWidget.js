@@ -2,8 +2,9 @@ import './cartWidget.css';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import NavFilter from '../NavFilter/NavFilter';
 
-const CartWidget = ({ showCartWidget, handleCartWidgetClick }) => {
+const CartWidget = ({ showCartWidget, handleCartWidgetClick, isSubMenuInicioVisible }) => {
   return (
     <ul className='lista-dos'>
       <li>
@@ -12,18 +13,15 @@ const CartWidget = ({ showCartWidget, handleCartWidgetClick }) => {
           <span>0</span>
         </Link>
       </li>
-      <li className='sub-menu-inicio'>
-        <input id="menu-derecha" type="checkbox"></input>
-        <label htmlFor="menu-derecha">
-          < MenuIcon onClick={handleCartWidgetClick} className='menu-icono-derecha' />
-        </label>
-        <nav className={`lista-sub-menu ${showCartWidget ? 'active' : ""}`}>
-          <ul>
-            <li><Link onClick={handleCartWidgetClick} className="link-sub-menu" to={`/`}>Productos</Link></li>
-            <li><Link onClick={handleCartWidgetClick} className="link-sub-menu" to={`/`}>Consultas</Link></li>
-          </ul>
-        </nav>
-      </li>
+      {isSubMenuInicioVisible &&
+        <li className='sub-menu-inicio'>
+          <input id="menu-derecha" type="checkbox"></input>
+          <label htmlFor="menu-derecha">
+            < MenuIcon onClick={handleCartWidgetClick} className='menu-icono-derecha' />
+          </label>
+          <NavFilter handleCartWidgetClick={handleCartWidgetClick} showCartWidget={showCartWidget} />
+        </li>}
+
     </ul>
   )
 }

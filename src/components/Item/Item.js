@@ -2,6 +2,7 @@ import './item.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({ producto }) => {
+
     return (
         <>
             <article className='producto'>
