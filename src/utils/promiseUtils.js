@@ -1,4 +1,6 @@
-import data from "../data/data.json"
+import { productosTotales } from "../serviceMock";
+
+const data = productosTotales();
 
 export const pedirDatos = (categoriaId) => {
     return new Promise((resolve) => {
