@@ -1,4 +1,5 @@
 import './itemDetail.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCount } from '../../hooks/useCount';
 
 const ItemDetail = ({ producto }) => {
@@ -30,7 +31,7 @@ const ItemDetail = ({ producto }) => {
                         <span className='numero-producto'>{numero}</span>
                         <button className='boton-cantidad' onClick={incremento}><span>+</span></button>
                     </div>
-                    <button className='boton-compra'><span>E</span>Agregar al carrito</button>
+                    <button className='boton-compra'><span><ShoppingCartIcon className='icono-carrito-detalle'/></span>Agregar al carrito</button>
                 </div>
             </article>
         </>

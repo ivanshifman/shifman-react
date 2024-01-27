@@ -12,7 +12,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 const NavBar = () => {
 
   const location = useLocation();
-  const isSubMenuInicioVisible = ['/', '/categoria/accesorio', '/categoria/equipos'].includes(location.pathname);
+  const isSubMenuInicioVisible = ['/', '/categoria/accesorios', '/categoria/equipos'].includes(location.pathname);
 
   const [show, setShow] = useState(false)
   const [showCartWidget, setShowCartWidget] = useState(false);
@@ -36,7 +36,7 @@ const NavBar = () => {
         </Link>
         <ul className={`lista-uno ${show ? 'active' : ""}`}>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/`}><span><HomeIcon /></span>Inicio</NavLink></li>
-          <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/accesorio`}><span><HeadsetIcon /></span>Accesorios</NavLink></li>
+          <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/accesorios`}><span><HeadsetIcon /></span>Accesorios</NavLink></li>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/categoria/equipos`}><span><ComputerIcon /></span>Equipos</NavLink></li>
           <li><NavLink className='menu-link' onClick={handleClick} to={`/contacto`}><span><LocalPhoneIcon /></span>Contacto</NavLink></li>
         </ul>

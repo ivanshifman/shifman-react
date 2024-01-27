@@ -101,7 +101,7 @@ import silla6a from "../src/assets/silla6a.webp"
 import silla6b from "../src/assets/silla6b.webp"
 import silla6c from "../src/assets/silla6c.webp"
 
-export const productosTotales = () => 
+export const productosTotales = () =>
     [
         {
             id: 1,
@@ -435,7 +435,7 @@ export const productosTotales = () =>
         },
         {
             id: 23,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "ideon",
             precio: 1200,
@@ -450,7 +450,7 @@ export const productosTotales = () =>
         },
         {
             id: 24,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "ideon",
             precio: 1400,
@@ -465,7 +465,7 @@ export const productosTotales = () =>
         },
         {
             id: 25,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "ideon",
             precio: 1200,
@@ -480,7 +480,7 @@ export const productosTotales = () =>
         },
         {
             id: 26,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "kanji",
             precio: 1100,
@@ -495,7 +495,7 @@ export const productosTotales = () =>
         },
         {
             id: 27,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "kanji",
             precio: 1600,
@@ -510,7 +510,7 @@ export const productosTotales = () =>
         },
         {
             id: 28,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "silla",
             marca: "kanji",
             precio: 1200,
@@ -525,7 +525,7 @@ export const productosTotales = () =>
         },
         {
             id: 29,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "philips",
             precio: 120,
@@ -540,7 +540,7 @@ export const productosTotales = () =>
         },
         {
             id: 30,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "philips",
             precio: 120,
@@ -555,7 +555,7 @@ export const productosTotales = () =>
         },
         {
             id: 31,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "philips",
             precio: 120,
@@ -570,7 +570,7 @@ export const productosTotales = () =>
         },
         {
             id: 32,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "jbl",
             precio: 190,
@@ -585,7 +585,7 @@ export const productosTotales = () =>
         },
         {
             id: 33,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "jbl",
             precio: 160,
@@ -600,7 +600,7 @@ export const productosTotales = () =>
         },
         {
             id: 34,
-            categoria: "accesorio",
+            categoria: "accesorios",
             subcategoria: "parlante",
             marca: "jbl",
             precio: 150,

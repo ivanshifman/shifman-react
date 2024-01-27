@@ -7,19 +7,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-    <BrowserRouter>
+      <BrowserRouter>
         <NavBar />
 
         <Routes>
-            <Route path="/" element={<ItemListContainer />}></Route>
-            <Route path="/categoria/:categoriaId" element={<ItemListContainer />}></Route>
-            <Route path="/item/:itemId" element={<ItemDetailContainer />}></Route>
-            <Route path="/contacto" element={<Contacto />}></Route>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="/contacto" element={<Contacto />} />
 
         </Routes>
 
-    </BrowserRouter>
-       
+      </BrowserRouter>
+
     </>
   );
 }

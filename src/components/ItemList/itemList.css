@@ -30,7 +30,8 @@ img {
 
 @media (max-width: 1000px) {
     .productos {
-        padding: 0 30px 30px 30px;
+        padding: 30px 30px 30px 30px;
+        
     }
 
     .productos h2 {
