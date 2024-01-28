@@ -41,17 +41,17 @@ const Contacto = () => {
 
   return (
     <div className='formulario'>
-      <div className='contact-cont'>
-        <div className='title'>
+      <div className='contacto-contenedor'>
+        <div className='titulo-contacto'>
           <h2>Contacto</h2>
         </div>
-        <div className='box'>
-          <div className='contact form'>
+        <div className='caja-contacto'>
+          <div className='contacto form'>
             <h3>Envía tu mensaje</h3>
             <form onSubmit={onSubmit}>
-              <div className='formBox'>
-                <div className='row50'>
-                  <div className='inputBox'>
+              <div className='form-contenido'>
+                <div className='fila50'>
+                  <div className='input-contenido'>
                     <label htmlFor='nombre'>Nombre</label>
                     <input type='text' placeholder='Nombre' id='nombre' {...register("nombre",
                       {
@@ -74,7 +74,7 @@ const Contacto = () => {
                       })} />
                     {errors.nombre && <span>{errors.nombre.message}</span>}
                   </div>
-                  <div className='inputBox'>
+                  <div className='input-contenido'>
                     <label htmlFor='apellido'>Apellido</label>
                     <input type='text' placeholder='Apellido' id='apellido' {...register("apellido", {
                       required: {
@@ -98,8 +98,8 @@ const Contacto = () => {
                   </div>
                 </div>
 
-                <div className='row50'>
-                  <div className='inputBox'>
+                <div className='fila50'>
+                  <div className='input-contenido'>
                     <label htmlFor='email'>Email</label>
                     <input type='email' placeholder='Email' id='email' {...register("email", {
                       required: {
@@ -113,7 +113,7 @@ const Contacto = () => {
                     })} />
                     {errors.email && <span>{errors.email.message}</span>}
                   </div>
-                  <div className='inputBox'>
+                  <div className='input-contenido'>
                     <label htmlFor='numero'>Número</label>
                     <input type='tel' placeholder='Numero' id='numero' {...register("numero", {
                       required: {
@@ -137,8 +137,8 @@ const Contacto = () => {
                   </div>
                 </div>
 
-                <div className='row100'>
-                  <div className='inputBox'>
+                <div className='fila100'>
+                  <div className='input-contenido'>
                     <label htmlFor='mensaje'>Mensaje</label>
                     <textarea id='mensaje' placeholder='Escribe tu mensaje' {...register("mensaje", {
                       required: {
@@ -158,8 +158,8 @@ const Contacto = () => {
                   </div>
                 </div>
 
-                <div className='row100'>
-                  <div className='inputBox inputButton'>
+                <div className='fila100'>
+                  <div className='input-contenido input-boton'>
                     <button type='submit'>Enviar</button>
                   </div>
                 </div>
@@ -167,9 +167,9 @@ const Contacto = () => {
               </div>
             </form>
           </div>
-          <div className='contact info'>
+          <div className='contacto info'>
             <h3>Información</h3>
-            <div className='infoBox'>
+            <div className='info-contenido'>
               <div>
                 <span><LocationOnIcon /></span>
                 <p>Banfield, Buenos Aires <br />Argentina</p>
@@ -182,7 +182,7 @@ const Contacto = () => {
                 <span><PhoneForwardedIcon /></span>
                 <p>+54 1123456783</p>
               </div>
-              <ul className='sci'>
+              <ul className='info-redes'>
                 <li><i ><FacebookIcon className='facebook' /></i></li>
                 <li><i ><TwitterIcon className='twitter' /></i></li>
                 <li><i ><InstagramIcon className='instagram' /></i></li>
@@ -190,9 +190,9 @@ const Contacto = () => {
               </ul>
             </div>
           </div>
-          <div className='contact map'>
+          <div className='contacto info-minimo'>
             <h3>Inconvenientes</h3>
-            <div className='mapBox'>
+            <div className='info-minimo-contenido'>
               <div>
                 <span><HelpIcon /></span>
                 <p>Para cancelaciones, soportecompu@gmail.com</p>

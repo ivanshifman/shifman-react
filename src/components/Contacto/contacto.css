@@ -3,7 +3,7 @@
     max-width: 1200px;
 }
 
-.contact-cont {
+.contacto-contenedor {
     position: relative;
     text-align: center;
     padding: 40px 10px;
@@ -11,13 +11,13 @@
     margin-top: 5.7rem !important;
 }
 
-.contact-cont .title {
+.contacto-contenedor .titulo-contacto {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-cont .title h2 {
+.contacto-contenedor .titulo-contacto h2 {
     color: rgb(65, 3, 3);
     text-shadow: 2px 2px 2px rgb(65, 3, 3);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -34,29 +34,29 @@
     grid-area: info;
 }
 
-.map {
-    grid-area: map;
+.info-minimo {
+    grid-area: info-minimo;
 }
 
-.contact {
+.contacto {
     padding: 40px;
     background-color: rgb(245, 245, 245);
     box-shadow: 0 5px 35px rgba(191, 34, 34, 0.929);
 }
 
-.box {
+.caja-contacto {
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 5fr 4fr;
-    grid-template-areas: 
-    "form info"
-    "form map";
+    grid-template-areas:
+        "form info"
+        "form info-minimo";
     gap: 20px;
     margin-top: 50px;
 }
 
-.contact h3 {
+.contacto h3 {
     color: rgb(65, 3, 3);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
@@ -68,28 +68,28 @@
     border-radius: 1rem;
 }
 
-.formBox {
+.form-contenido {
     position: relative;
     width: 100%;
 }
 
-.formBox .row50 {
+.form-contenido .fila50 {
     display: flex;
     gap: 20px;
 }
 
-.inputBox {
+.input-contenido {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 50%;
 }
 
-.formBox .row100 .inputBox {
+.form-contenido .fila100 .input-contenido {
     width: 100%;
 }
 
-.inputBox label {
+.input-contenido label {
     color: rgb(65, 3, 3);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 10px;
@@ -97,7 +97,7 @@
     font-weight: 500;
 }
 
-.inputBox input {
+.input-contenido input {
     padding: 10px;
     font-size: 1.1rem;
     outline: none;
@@ -105,7 +105,7 @@
     cursor: text;
 }
 
-.inputBox textarea {
+.input-contenido textarea {
     padding: 10px;
     font-size: 1.1rem;
     outline: none;
@@ -116,18 +116,18 @@
     margin-bottom: 10px;
 }
 
-.inputBox ::placeholder {
+.input-contenido ::placeholder {
     color: rgba(65, 3, 3, 0.644);
 }
 
-.inputButton {
+.input-boton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
 
-.inputButton button {
+.input-boton button {
     background-color: rgba(191, 34, 34);
     color: rgb(245, 245, 245);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -141,7 +141,7 @@
     transition: .3s ease all;
 }
 
-.inputButton button:hover {
+.input-boton button:hover {
     background-color: rgb(65, 3, 3);
 }
 
@@ -150,7 +150,7 @@
     border-radius: 1rem;
 }
 
-.infoBox {
+.info-contenido {
     margin-top: 2rem;
 }
 
@@ -160,13 +160,13 @@
     font-size: 1.4rem;
 }
 
-.info .infoBox div {
+.info .info-contenido div {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.info .infoBox div span {
+.info .info-contenido div span {
     min-width: 38px;
     height: 38px;
     color: rgb(65, 3, 3);
@@ -179,22 +179,22 @@
     margin-right: 15px;
 }
 
-.info .infoBox div p {
+.info .info-contenido div p {
     color: rgb(245, 245, 245);
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.sci {
+.info-redes {
     margin-top: 40px;
     display: flex;
 }
 
-.sci li {
+.info-redes li {
     margin-right: 15px;
 }
 
-.sci li i {
+.info-redes li i {
     font-size: 1.9rem;
     cursor: pointer;
 }
@@ -219,39 +219,39 @@
     font-size: 2rem !important;
 }
 
-.map {
+.info-minimo {
     background-color: rgba(227, 30, 30, 0.848);
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
 }
 
-.map h3 {
+.info-minimo h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(245, 245, 245);
     font-size: 1.4rem;
 }
 
-.mapBox {
+.info-minimo-contenido {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top: 2rem;
 }
 
-.mapBox div {
+.info-minimo-contenido div {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-.map .mapBox div p {
+.info-minimo .info-minimo-contenido div p {
     color: rgb(245, 245, 245);
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.map .mapBox div span {
+.info-minimo .info-minimo-contenido div span {
     min-width: 38px;
     height: 38px;
     color: rgb(65, 3, 3);
@@ -264,7 +264,7 @@
     margin-right: 15px;
 }
 
-.inputBox span {
+.input-contenido span {
     color: red;
     font-size: .9rem;
     text-align: left;
@@ -272,7 +272,7 @@
 
 .swal2-popup {
     border: 3px solid rgb(24, 154, 46);
-    
+
 }
 
 .swal2-success-circular-line-left {
@@ -336,30 +336,30 @@
 
 @media(max-width: 1000px) {
 
-    .contact-cont {
+    .contacto-contenedor {
         padding: 20px;
     }
 
-    .contact-cont .title h2 {
+    .contacto-contenedor .titulo-contacto h2 {
         margin-bottom: 10px;
     }
 
-    .box{
+    .caja-contacto {
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-template-areas: 
-        "form"
-        "info"
-        "map";
+        grid-template-areas:
+            "form"
+            "info"
+            "info-minimo";
     }
 
-    .inputButton {
+    .input-boton {
         margin-top: 1.8rem;
     }
-    
-    .inputButton button {
+
+    .input-boton button {
         font-size: .9rem;
         width: 220px;
         padding: 10px 12px;
@@ -373,35 +373,34 @@
         align-items: center;
     }
 
-    .sci {
+    .info-redes {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .inputBox textarea {
+    .input-contenido textarea {
         padding: 10px;
         min-height: 220px;
         margin-bottom: 10px;
     }
 
-    
-    .formBox .row50 {
+
+    .form-contenido .fila50 {
         display: flex;
         gap: 0;
         flex-direction: column;
     }
 
-    .inputBox {
+    .input-contenido {
         width: 100%;
     }
 
-    .contact {
+    .contacto {
         padding: 30px;
     }
 
-    .map {
-        min-height: 300px;
+    .info-minimo {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -411,32 +410,143 @@
 }
 
 @media (max-width: 468px) {
-    .contact-cont .title h2 {
+    .contacto-contenedor .titulo-contacto h2 {
         font-size: 30px;
     }
 
-    .contact-cont {
+    .contacto-contenedor {
         padding: 10px 25px;
     }
 
-    .contact {
+    .contacto {
         padding: 20px;
+        margin: 0 auto;
+        width: 100%;
     }
 
-    .contact h3 {
+    .form-contenido {
+        padding: 10px;
+    }
+
+    .info-minimo {
+        height: auto;
+    }
+
+    .contacto h3 {
         font-size: 1rem;
     }
 
-    .inputBox label {
+    .input-contenido label {
         font-size: .8rem;
     }
 
-    .inputBox input {
+    .input-contenido input {
         font-size: .8rem;
     }
 
-    .inputBox textarea {
+    .input-contenido textarea {
         font-size: .8rem;
+
+    }
+}
+
+@media (max-width: 360px) {
+
+    .contacto-contenedor {
+        padding: 20px 0;
+    }
+
+    .contacto {
+        padding: 20px;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .input-contenido label {
+        font-size: .7rem;
+    }
+
+    .input-contenido input {
+        font-size: .7rem;
+    }
+
+    .input-contenido textarea {
+        font-size: .7rem;
+    }
+
+    .input-boton {
+        margin-top: 1.3rem;
+    }
+
+    .input-boton button {
+        font-size: .9rem;
+        width: 150px;
+        padding: 7px 10px;
+        border-radius: .5rem;
+    }
+
+    .info-minimo .info-minimo-contenido div p {
+        font-size: .8rem;
+    }
     
+    .info-minimo .info-minimo-contenido div span {
+        min-width: 29px;
+        height: 29px;
+        font-size: .8rem;
+    }
+
+    .info-minimo h3 {
+        font-size: 1.3rem;
+    }
+    
+    .input-contenido span {
+        font-size: .55rem;
+    }
+
+    .info-contenido {
+        margin-top: 1.2rem;
+    }
+    
+    .info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .info .info-contenido div span {
+        min-width: 29px;
+        height: 29px;
+        font-size: .8rem;
+    }
+    
+    .info .info-contenido div p {
+        font-size: .8rem;
+    }
+    
+    .info-redes {
+        margin-top: 30px;
+    }
+    
+    .info-redes li {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .info-redes li i {
+        font-size: 1.8rem;
+    }
+    
+    .facebook {
+        font-size: 1.5rem !important;
+    }
+    
+    .twitter {
+        font-size: 1.5rem !important;
+    }
+    
+    .instagram {
+        font-size: 1.5rem !important;
+    }
+    
+    .whatsapp {
+        font-size: 1.5rem !important;
     }
 }

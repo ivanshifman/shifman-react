@@ -27,11 +27,16 @@ const NavBar = () => {
     setShow(false);
   }
 
+  const closeClick = () => {
+    setShowCartWidget(false);
+    setShow(false);
+  }
+
   return (
     <header>
       <nav className='navegacion'>
         <MenuLista show={show} handleClick={handleClick} />
-        <Link to={`/`} className='logo-contenedor'>
+        <Link to={`/`} className='logo-contenedor' onClick={closeClick}>
           <img className='logo' src={logo} alt="logo" />
         </Link>
         <ul className={`lista-uno ${show ? 'active' : ""}`}>
