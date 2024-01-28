@@ -15,7 +15,7 @@ const CartWidget = ({ showCartWidget, handleCartWidgetClick, isSubMenuInicioVisi
       </li>
       {isSubMenuInicioVisible &&
         <li className='sub-menu-inicio'>
-          <input id="menu-derecha" type="checkbox"></input>
+          <input id="menu-derecha" type="checkbox" />
           <label htmlFor="menu-derecha">
             < MenuIcon onClick={handleCartWidgetClick} className='menu-icono-derecha' />
           </label>

@@ -10,12 +10,12 @@ const ItemDetail = ({ producto }) => {
         <>
             <article className='contenedor-imagenes'>
                 <div className='contenedor-imagen'>
-                    <img className='imagen-principal' src={producto.imagen.img1} alt={producto.titulo}></img>
+                    <img className='imagen-principal' src={producto.imagen.img1} alt={producto.titulo} />
                 </div>
                 <div className='contenedor-imagenes-opcion'>
-                    <img className='imagen-opcion' src={producto.imagen.img1} alt={producto.titulo}></img>
-                    <img className='imagen-opcion' src={producto.imagen.img2} alt={producto.titulo}></img>
-                    <img className='imagen-opcion' src={producto.imagen.img3} alt={producto.titulo}></img>
+                    <img className='imagen-opcion' src={producto.imagen.img1} alt={producto.titulo} />
+                    <img className='imagen-opcion' src={producto.imagen.img2} alt={producto.titulo} />
+                    <img className='imagen-opcion' src={producto.imagen.img3} alt={producto.titulo} />
                 </div>
             </article>
 
@@ -31,7 +31,7 @@ const ItemDetail = ({ producto }) => {
                         <span className='numero-producto'>{numero}</span>
                         <button className='boton-cantidad' onClick={incremento}><span>+</span></button>
                     </div>
-                    <button className='boton-compra'><span><ShoppingCartIcon className='icono-carrito-detalle'/></span>Agregar al carrito</button>
+                    <button className='boton-compra'><span><ShoppingCartIcon className='icono-carrito-detalle' /></span>Agregar al carrito</button>
                 </div>
             </article>
         </>

@@ -271,7 +271,7 @@
     }
 
     .contact-cont .title h2 {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .box{
@@ -357,12 +357,16 @@
         font-size: 1rem;
     }
 
+    .inputBox label {
+        font-size: .8rem;
+    }
+
     .inputBox input {
-        font-size: .7rem;
+        font-size: .8rem;
     }
 
     .inputBox textarea {
-        font-size: .7rem;
+        font-size: .8rem;
     
     }
 }
