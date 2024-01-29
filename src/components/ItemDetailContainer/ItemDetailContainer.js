@@ -10,6 +10,11 @@ const ItemDetailContainer = () => {
     const[producto, setProducto] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (newImage) => {
+        setSelectedImage(newImage);
+    };
 
     const {itemId} = useParams()
 
@@ -35,7 +40,7 @@ const ItemDetailContainer = () => {
     return (
         <div className='contenedor-total-producto'>
             <div className='contenedor-producto'>
-                {producto && <ItemDetail producto={producto}/>}
+                {producto && <ItemDetail producto={producto} selectedImage={selectedImage} onImageClick={handleImageClick}/>}
             </div>
         </div>
     )

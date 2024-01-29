@@ -11,3 +11,15 @@
     padding-bottom: 2rem;
     z-index: -2;
 }
+
+@media (max-width: 1000px) {
+
+    .contenedor-total-producto {
+        margin-top: 4.5rem;
+    }
+
+    .contenedor-producto {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
