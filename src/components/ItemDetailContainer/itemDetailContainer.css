@@ -1,25 +1,24 @@
 .contenedor-total-producto {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .contenedor-producto {
-    display: grid;
-    grid-template-columns: 2fr 1.5fr;
-    gap: 2rem;
-    padding-top: 4.5rem;
-    padding-bottom: 2rem;
-    z-index: -2;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 2rem;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  z-index: -2;
 }
 
 @media (max-width: 1000px) {
+  .contenedor-total-producto {
+    margin-top: 4.5rem;
+  }
 
-    .contenedor-total-producto {
-        margin-top: 4.5rem;
-    }
-
-    .contenedor-producto {
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
+  .contenedor-producto {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
 }

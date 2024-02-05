@@ -6,6 +6,7 @@
   text-decoration: none;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
