@@ -14,11 +14,13 @@ const ItemList = ({ productos, categoriaId }) => {
       <div className="productos">
         {showTitle && <h2>{categoriaId ? categoriaId : `productos`}</h2>}
 
-        <div className="producto-contenido">
-          {productos.map((prod) => (
-            <Item producto={prod} key={prod.id} />
-          ))}
-        </div>
+        {productos.length > 0 && (
+          <div className="producto-contenido">
+            {productos.map((prod) => (
+              <Item producto={prod} key={prod.id} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

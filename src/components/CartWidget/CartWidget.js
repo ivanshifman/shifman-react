@@ -12,7 +12,7 @@ const CartWidget = ({
   return (
     <ul className="lista-dos">
       <li>
-        <Link className="contenedor-logo-carrito" to={`/`}>
+        <Link className="contenedor-logo-carrito" to={`/cart`}>
           <ShoppingBasketIcon className="logo-carrito" />
           <span>0</span>
         </Link>

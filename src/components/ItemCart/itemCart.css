@@ -1,0 +1,11 @@
+.producto-cont-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
