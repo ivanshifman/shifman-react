@@ -1,6 +1,7 @@
 import "./itemListContainer.css";
 import { pedirDatos } from "../../utils/promiseUtils";
 import ItemList from "../ItemList/ItemList";
+import Banner from "../Banner/Banner";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Spinner, SpinnerError } from "../Spinner/Spinner";
@@ -34,6 +35,7 @@ const ItemListContainer = () => {
 
   return (
     <>
+      {categoriaId === undefined && <Banner />}
       <ItemList productos={productos} categoriaId={categoriaId} />
     </>
   );
