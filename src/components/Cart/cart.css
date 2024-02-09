@@ -57,9 +57,17 @@ h2 {
   gap: 1.5rem;
 }
 
-.botones button {
+.boton {
+  width: 100%;
+}
+
+.boton button {
+  width: 100%;
+}
+
+.botones button, .botones .boton button {
   padding: 4px 6px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   outline: none;
