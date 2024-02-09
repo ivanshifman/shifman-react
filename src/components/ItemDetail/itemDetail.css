@@ -12,7 +12,8 @@
 }
 
 .contenedor-imagen .imagen-principal {
-  height: 100%;
+  height: 90%;
+  width: 70%;
   z-index: -10;
 }
 
@@ -99,6 +100,18 @@
   width: 100%;
 }
 
+.contenedor-detalles-desc small {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.1rem;
+  color: rgb(93, 14, 14);
+  text-shadow: 1px 1px 1px rgb(105, 11, 11);
+  word-wrap: break-word;
+  width: 100%;
+}
+
 .contenedor-cantidad {
   display: flex;
   justify-content: flex-start;
@@ -174,10 +187,16 @@
     width: 60vw;
   }
 
+  .contenedor-imagen .imagen-principal {
+    height: 90%;
+    width: 90%;
+  }
+
   .contenedor-imagenes-opcion {
     justify-content: space-around;
     width: 60vw;
     margin-top: 2rem;
+    gap: .5rem;
   }
 
   .contenedor-detalles-producto {
@@ -218,7 +237,7 @@
   }
 
   .contenedor-imagenes-opcion .imagen-opcion {
-    height: 110px;
+    height: 130px;
   }
 
   .contenedor-detalles-desc h2 {
@@ -231,6 +250,10 @@
 
   .contenedor-detalles-desc span {
     font-size: 1.9rem;
+  }
+
+  .contenedor-detalles-desc small {
+    font-size: .8rem;
   }
 
   .contador-producto .boton-cantidad {
@@ -259,7 +282,7 @@
   }
 
   .contenedor-imagenes-opcion .imagen-opcion {
-    height: 80px;
+    height: 100px;
   }
 
   .contenedor-detalles-desc {
@@ -297,5 +320,11 @@
 
   .icono-carrito-detalle {
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contenedor-imagenes-opcion {
+    justify-content: space-around;
   }
 }

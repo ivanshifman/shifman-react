@@ -13,13 +13,7 @@ const ItemCart = () => {
       <div className="carrito-producto-cantidad">
         <small>Cantidad</small>
         <div className="carrito-control">
-          <button className="carrito-control-boton carrito-control-menos">
-            <span className="carrito-control-signo">-</span>
-          </button>
-          <span className="contador-cantidad">0</span>
-          <button className="carrito-control-boton carrito-control-mas">
-            <span className="carrito-control-signo">+</span>
-          </button>
+          <span className="cantidad">0</span>
         </div>
       </div>
       <div className="carrito-producto-precio">
