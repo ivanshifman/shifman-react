@@ -6,26 +6,24 @@ const ItemCart = () => {
   return (
     <div className="producto-cont-cart">
       <img className="carrito-producto-imagen" src={img} alt="hola" />
-      <div className="carrito-producto-titulo">
+      <div className="carrito-producto-titulo carrito-detalles">
         <small>Título</small>
-        <h3>holllllllllllllllll titulooooooooooo8888888888888888888888o</h3>
+        <h3>holllllllllllllllll tituloooo ooooooo888888888 8888888888888o fgdhdhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhh</h3>
       </div>
-      <div className="carrito-producto-cantidad">
+      <div className="carrito-producto-cantidad carrito-detalles">
         <small>Cantidad</small>
-        <div className="carrito-control">
-          <span className="cantidad">0</span>
-        </div>
+        <span className="cantidad">0</span>
       </div>
-      <div className="carrito-producto-precio">
+      <div className="carrito-producto-precio carrito-detalles">
         <small>Precio</small>
-        <p>$$1600</p>
+        <p>$1600</p>
       </div>
-      <div className="carrito-producto-subtotal">
+      <div className="carrito-producto-subtotal carrito-detalles">
         <small>Subtotal</small>
         <p>$25000</p>
       </div>
       <button className="carrito-producto-eliminar">
-        <DeleteIcon />
+        <DeleteIcon className="producto-eliminar"/>
       </button>
     </div>
   );

@@ -8,11 +8,12 @@ const CartWidget = ({
   showCartWidget,
   handleCartWidgetClick,
   isSubMenuInicioVisible,
+  closeClick,
 }) => {
   return (
     <ul className="lista-dos">
       <li>
-        <Link className="contenedor-logo-carrito" to={`/cart`}>
+        <Link className="contenedor-logo-carrito" to={`/cart`} onClick={closeClick}>
           <ShoppingBasketIcon className="logo-carrito" />
           <span>0</span>
         </Link>

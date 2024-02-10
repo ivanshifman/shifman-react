@@ -11,6 +11,15 @@ const Cart = () => {
           <div className="producto-carrito">
             <ItemCart />
           </div>
+          <div className="producto-carrito">
+            <ItemCart />
+          </div>
+          <div className="producto-carrito">
+            <ItemCart />
+          </div>
+          <div className="producto-carrito">
+            <ItemCart />
+          </div>
         </div>
         <div className="aside-carrito">
           <div className="min-aside">
@@ -21,7 +30,7 @@ const Cart = () => {
           </div>
           <div className="min-aside">
             <div className="p-items-carrito">
-              <p>Total</p>
+              <p>Total:</p>
               <span>$15000</span>
             </div>
           </div>

@@ -91,7 +91,8 @@ const NavBar = () => {
         <CartWidget
           showCartWidget={showCartWidget}
           handleCartWidgetClick={handleCartWidgetClick}
-          isSubMenuInicioVisible={isSubMenuInicioVisible}
+          isSubMenuInicioVisible={isSubMenuInicioVisible} 
+          closeClick={closeClick}
         />
       </nav>
     </header>

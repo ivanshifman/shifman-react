@@ -26,6 +26,7 @@
 
 .contenedor-imagenes-opcion .imagen-opcion {
   height: 140px;
+  width: 140px;
   border: 1px solid rgb(49, 43, 43);
   border-radius: 0.5rem;
   padding: 1px;
@@ -238,6 +239,7 @@
 
   .contenedor-imagenes-opcion .imagen-opcion {
     height: 130px;
+    width: 130px;
   }
 
   .contenedor-detalles-desc h2 {
@@ -283,6 +285,7 @@
 
   .contenedor-imagenes-opcion .imagen-opcion {
     height: 100px;
+    width: 100px;
   }
 
   .contenedor-detalles-desc {
@@ -323,8 +326,13 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .contenedor-imagenes-opcion {
     justify-content: space-around;
+  }
+
+  .contador-producto .boton-cantidad {
+    font-size: 1rem;
+    padding: 2px 5px;
   }
 }
