@@ -121,6 +121,42 @@ h2 {
   background-color: rgb(121, 12, 12);
 }
 
+.carrito-vacio-cont {
+  margin-top: 5rem;
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.p-vacio {
+  font-size: 2rem;
+  color: rgb(121, 12, 12);
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.b-vacio {
+  padding: 8px 10px;
+  font-size: 1.6rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  color: rgb(245, 245, 245);
+  background-color: rgb(25, 144, 39);
+}
+
+.b-vacio:hover {
+  background-color: rgb(15, 91, 23);
+}
+
 @media (max-width: 1000px) {
   .contenedor-cart {
     grid-template-columns: 1fr;
@@ -161,5 +197,14 @@ h2 {
   .botones .boton button {
     padding: 4px 6px;
     font-size: 0.9rem;
+  }
+
+  .p-vacio {
+    font-size: 1.5rem;
+  }
+  
+  .b-vacio {
+    padding: 6px 8px;
+    font-size: 1.2rem;
   }
 }

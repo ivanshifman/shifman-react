@@ -116,7 +116,7 @@ export const productosTotales = () => [
     descripcion:
       "Notebook Acer Aspire 15.6 HD, potente rendimiento con procesador Intel Core i5.",
     stock: 120,
-    titulo: "Acer Aspire 15.6'' 256gb, 8gb ram",
+    titulo: "Acer Aspire 15.6'' 256gb, 8gb ram, elegante y brillante",
   },
   {
     id: 2,

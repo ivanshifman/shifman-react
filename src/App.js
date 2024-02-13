@@ -4,21 +4,27 @@ import Contacto from "./components/Contacto/Contacto";
 import NavBar from "./components/NavBar/NavBar";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <NavBar />
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
 
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
-          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<Cart />}/>
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route
+              path="/categoria/:categoriaId"
+              element={<ItemListContainer />}
+            />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/contacto" element={<Contacto />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

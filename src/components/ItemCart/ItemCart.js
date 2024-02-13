@@ -1,32 +1,44 @@
+import { useContext } from "react";
 import "./itemCart.css";
-import img from "../../assets/acer1a.webp";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { CartContext } from "../../context/CartContext";
 
-const ItemCart = () => {
-  return (
+const ItemCart = ({producto}) => {
+
+  const { removeItem } = useContext(CartContext);
+
+  const handleEliminar = () => {
+    removeItem(producto.id);
+  };
+
+  if(producto.cantidad > 0) {
+    return (
+    
     <div className="producto-cont-cart">
-      <img className="carrito-producto-imagen" src={img} alt="hola" />
+      <img className="carrito-producto-imagen" src={producto.imagen.img1} alt="hola" />
       <div className="carrito-producto-titulo carrito-detalles">
         <small>Título</small>
-        <h3>holllllllllllllllll tituloooo ooooooo888888888 8888888888888o fgdhdhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhh</h3>
+        <h3>{producto.titulo}</h3>
       </div>
       <div className="carrito-producto-cantidad carrito-detalles">
         <small>Cantidad</small>
-        <span className="cantidad">0</span>
+        <span className="cantidad">{producto.cantidad}</span>
       </div>
       <div className="carrito-producto-precio carrito-detalles">
         <small>Precio</small>
-        <p>$1600</p>
+        <p>${producto.precio}</p>
       </div>
       <div className="carrito-producto-subtotal carrito-detalles">
         <small>Subtotal</small>
-        <p>$25000</p>
+        <p>${producto.cantidad * producto.precio}</p>
       </div>
       <button className="carrito-producto-eliminar">
-        <DeleteIcon className="producto-eliminar"/>
+        <DeleteIcon className="producto-eliminar" onClick={handleEliminar}/>
       </button>
     </div>
   );
+  }
+  
 };
 
 export default ItemCart;

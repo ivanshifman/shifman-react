@@ -1,8 +1,12 @@
 import "./itemDetail.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCount } from "../../hooks/useCount";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ producto, selectedImage, onImageClick }) => {
+  const { addItem } = useContext(CartContext);
+
   const { incremento, decremento, cantidad } = useCount(1, 1, producto.stock);
 
   return (
@@ -62,7 +66,12 @@ const ItemDetail = ({ producto, selectedImage, onImageClick }) => {
               <span>+</span>
             </button>
           </div>
-          <button className="boton-compra">
+          <button
+            className="boton-compra"
+            onClick={() => {
+              addItem(producto, cantidad);
+            }}
+          >
             <span>
               <ShoppingCartIcon className="icono-carrito-detalle" />
             </span>
