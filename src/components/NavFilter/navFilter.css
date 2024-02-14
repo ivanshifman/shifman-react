@@ -27,6 +27,7 @@ label {
   align-items: center;
   font-size: 1rem;
   color: rgb(245, 245, 245);
+  padding-top: .2rem;
 }
 
 .closeCross {

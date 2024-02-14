@@ -464,7 +464,7 @@ export const productosTotales = () => [
     categoria: "accesorios",
     subcategoria: "silla",
     marca: "ideon",
-    precio: 1200,
+    precio: 3200,
     imagen: {
       img1: silla1a,
       img2: silla1b,
@@ -480,7 +480,7 @@ export const productosTotales = () => [
     categoria: "accesorios",
     subcategoria: "silla",
     marca: "ideon",
-    precio: 1400,
+    precio: 3400,
     imagen: {
       img1: silla2a,
       img2: silla2b,
@@ -496,7 +496,7 @@ export const productosTotales = () => [
     categoria: "accesorios",
     subcategoria: "silla",
     marca: "ideon",
-    precio: 1200,
+    precio: 3600,
     imagen: {
       img1: silla3a,
       img2: silla3b,

@@ -1,7 +1,40 @@
 import "./navFilter.css";
 import CloseIcon from "@mui/icons-material/Close";
+import { useLocation } from "react-router-dom";
 
 const NavFilter = ({ showCartWidget, handleCartWidgetClick }) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  const brandsToShow = {
+    equipos: ["acer", "asus", "hp", "lenovo", "noblex", "samsung"],
+    accesorios: ["kanji", "ideon", "philips", "jbl"],
+  };
+
+  const renderBrands = () => {
+    if (isHomePage) {
+      return Object.keys(brandsToShow).flatMap(category =>
+        brandsToShow[category].map(brand => (
+          <label key={brand} htmlFor={brand} className="labelThree">
+            <input type="checkbox" id={brand} />
+            {brand.charAt(0).toUpperCase() + brand.slice(1)}
+          </label>
+        ))
+      );
+    } else {
+      const category = location.pathname.includes("equipos")
+        ? "equipos"
+        : "accesorios";
+      
+      return brandsToShow[category].map((brand) => (
+        <label key={brand} htmlFor={brand} className="labelThree">
+          <input type="checkbox" id={brand} />
+          {brand.charAt(0).toUpperCase() + brand.slice(1)}
+        </label>
+      ));
+    }
+  };
+
   return (
     <>
       <nav className={`menuFilter ${showCartWidget ? "active" : ""}`}>
@@ -16,48 +49,7 @@ const NavFilter = ({ showCartWidget, handleCartWidgetClick }) => {
           <h3 className="filterWord">Filtro</h3>
           <div className="sectionAvailability">
             <h3 className="titleAvailability">Marca</h3>
-            <article className="availability">
-              <label htmlFor="acer" className="labelOne">
-                <input type="checkbox" id="acer" />
-                Acer
-              </label>
-              <label htmlFor="asus" className="labelTwo">
-                <input type="checkbox" id="asus" />
-                Asus
-              </label>
-              <label htmlFor="hp" className="labelThree">
-                <input type="checkbox" id="hp" />
-                HP
-              </label>
-              <label htmlFor="lenovo" className="labelThree">
-                <input type="checkbox" id="lenovo" />
-                Lenovo
-              </label>
-              <label htmlFor="samsung" className="labelThree">
-                <input type="checkbox" id="samsung" />
-                Samsung
-              </label>
-              <label htmlFor="noblex" className="labelThree">
-                <input type="checkbox" id="noblex" />
-                Noblex
-              </label>
-              <label htmlFor="ideon" className="labelThree">
-                <input type="checkbox" id="ideon" />
-                Ideon
-              </label>
-              <label htmlFor="kanji" className="labelThree">
-                <input type="checkbox" id="kanji" />
-                Kanji
-              </label>
-              <label htmlFor="philips" className="labelThree">
-                <input type="checkbox" id="philips" />
-                Philips
-              </label>
-              <label htmlFor="jbl" className="labelThree">
-                <input type="checkbox" id="jbl" />
-                JBL
-              </label>
-            </article>
+            <article className="availability">{renderBrands()}</article>
           </div>
           <div className="sectionPricing">
             <h3 className="titlePricing">Precios</h3>
@@ -72,7 +64,7 @@ const NavFilter = ({ showCartWidget, handleCartWidgetClick }) => {
               </label>
               <label htmlFor="maximo" className="priceThree">
                 <input type="checkbox" id="maximo" />
-                $2000 - $5000
+                $2000 - $4000
               </label>
             </article>
           </div>
