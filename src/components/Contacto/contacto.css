@@ -84,6 +84,7 @@
   flex-direction: column;
   margin-bottom: 10px;
   width: 50%;
+  text-align: left;
 }
 
 .form-contenido .fila100 .input-contenido {
