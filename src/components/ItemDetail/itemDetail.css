@@ -183,6 +183,28 @@
   margin-top: 0.3rem;
 }
 
+.contenedor-botones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.contenedor-botones .boton-nuevo .boton-compra {
+  width: 15vw;
+}
+
+.boton-new-compra {
+  background-color: rgb(45, 88, 216) !important;
+  color: rgb(245, 245, 245) !important;
+}
+
+.boton-new-compra:hover {
+  background-color: rgb(4, 24, 66) !important;
+}
+
+
+
 @media (max-width: 1000px) {
   .contenedor-imagen {
     width: 60vw;
@@ -230,6 +252,14 @@
     padding: 6px 9px;
     width: 70%;
   }
+
+  .contenedor-botones {
+    gap: .5rem;
+  }
+
+  .contenedor-botones .boton-nuevo .boton-compra {
+    width: 30vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -269,6 +299,11 @@
   .contenedor-cantidad .boton-compra {
     font-size: 1rem;
     padding: 3px 4px;
+  }
+
+  .contenedor-botones .boton-nuevo .boton-compra {
+    font-size: 1.2rem;
+    padding: 7px 10px;
   }
 }
 
@@ -319,6 +354,13 @@
   .contenedor-cantidad .boton-compra {
     font-size: 0.7rem;
     padding: 2px 3px;
+  }
+
+
+  .contenedor-botones .boton-nuevo .boton-compra {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+    width: 35vw;
   }
 
   .icono-carrito-detalle {

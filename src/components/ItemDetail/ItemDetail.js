@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./itemDetail.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCount } from "../../hooks/useCount";
@@ -6,8 +8,13 @@ import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ producto, selectedImage, onImageClick }) => {
   const { addItem } = useContext(CartContext);
-
   const { incremento, decremento, cantidad } = useCount(1, 1, producto.stock);
+  const [agregado, setAgregado] = useState(false);
+
+  const handleAgregarAlCarrito = () => {
+    addItem(producto, cantidad);
+    setAgregado(true);
+  };
 
   return (
     <>
@@ -57,26 +64,39 @@ const ItemDetail = ({ producto, selectedImage, onImageClick }) => {
           <small>Stock: {producto.stock}</small>
         </div>
         <div className="contenedor-cantidad">
-          <div className="contador-producto">
-            <button className="boton-cantidad" onClick={decremento}>
-              <span>-</span>
-            </button>
-            <span className="numero-producto">{cantidad}</span>
-            <button className="boton-cantidad" onClick={incremento}>
-              <span>+</span>
-            </button>
-          </div>
-          <button
-            className="boton-compra"
-            onClick={() => {
-              addItem(producto, cantidad);
-            }}
-          >
-            <span>
-              <ShoppingCartIcon className="icono-carrito-detalle" />
-            </span>
-            Agregar al carrito
-          </button>
+          {producto.stock > 0 && !agregado && (
+            <>
+              <div className="contador-producto">
+                <button className="boton-cantidad" onClick={decremento}>
+                  <span>-</span>
+                </button>
+                <span className="numero-producto">{cantidad}</span>
+                <button className="boton-cantidad" onClick={incremento}>
+                  <span>+</span>
+                </button>
+              </div>
+              <button className="boton-compra" onClick={handleAgregarAlCarrito}>
+                <span>
+                  <ShoppingCartIcon className="icono-carrito-detalle" />
+                </span>
+                Agregar al carrito
+              </button>
+            </>
+          )}
+          {agregado && (
+            <div className="contenedor-botones">
+              <Link to="/" className="boton-nuevo">
+                <button className="boton-compra boton-new-compra">
+                  Ir a inicio
+                </button>
+              </Link>
+              <Link to="/cart" className="boton-nuevo">
+                <button className="boton-compra boton-new-end">
+                  Ir a carrito
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </article>
     </>
