@@ -1,4 +1,6 @@
 import "./contacto.css";
+import { db } from "../../firebase/config";
+import { collection, addDoc } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -20,7 +22,13 @@ const Contacto = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     const shouldReset = await showConfirmation();
-    console.log(data);
+    const client = {
+      information: data,
+    };
+
+    const contactoRef = collection(db, "consultas");
+
+    addDoc(contactoRef, client);
 
     if (shouldReset) {
       reset();

@@ -1,6 +1,6 @@
+import "./itemDetail.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./itemDetail.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCount } from "../../hooks/useCount";
 import { useContext } from "react";
