@@ -2,8 +2,6 @@
 
 Este es un proyecto de e-commerce desarrollado en React llamado Computronix, una tienda de tecnología en línea. La aplicación permite a los usuarios navegar por los productos, agregarlos a un carrito de compras y proceder al pago. También incluye un formulario de contacto para consultas de clientes.
 
-![Computronix logo](../shifman-react/src/assets/logocom.webp)
-
 ## Funcionalidades
 
 - Navegar productos por categoría (Equipos, Accesorios).
