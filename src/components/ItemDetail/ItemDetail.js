@@ -22,36 +22,36 @@ const ItemDetail = ({ producto, selectedImage, onImageClick }) => {
         <div className="contenedor-imagen">
           <img
             className="imagen-principal"
-            src={selectedImage || producto.imagen.img1}
+            src={selectedImage || producto.img1}
             alt={producto.titulo}
           />
         </div>
         <div className="contenedor-imagenes-opcion">
           <img
             className={`imagen-opcion ${
-              !selectedImage || selectedImage === producto.imagen.img1
+              !selectedImage || selectedImage === producto.img1
                 ? "selected"
                 : ""
             }`}
-            src={producto.imagen.img1}
+            src={producto.img1}
             alt={producto.titulo}
-            onClick={() => onImageClick(producto.imagen.img1)}
+            onClick={() => onImageClick(producto.img1)}
           />
           <img
             className={`imagen-opcion ${
-              selectedImage === producto.imagen.img2 ? "selected" : ""
+              selectedImage === producto.img2 ? "selected" : ""
             }`}
-            src={producto.imagen.img2}
+            src={producto.img2}
             alt={producto.titulo}
-            onClick={() => onImageClick(producto.imagen.img2)}
+            onClick={() => onImageClick(producto.img2)}
           />
           <img
             className={`imagen-opcion ${
-              selectedImage === producto.imagen.img3 ? "selected" : ""
+              selectedImage === producto.img3 ? "selected" : ""
             }`}
-            src={producto.imagen.img3}
+            src={producto.img3}
             alt={producto.titulo}
-            onClick={() => onImageClick(producto.imagen.img3)}
+            onClick={() => onImageClick(producto.img3)}
           />
         </div>
       </article>

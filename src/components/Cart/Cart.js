@@ -50,7 +50,9 @@ const Cart = () => {
             </div>
           </div>
           <div className="botones">
-            <button className="comprar">Finalizar compra</button>
+            <Link className="boton" to={`/checkout`}>
+              <button className="comprar">Finalizar compra</button>
+            </Link>
             <Link className="boton" to={`/`}>
               <button className="seguir-comprar">Seguir comprando</button>
             </Link>

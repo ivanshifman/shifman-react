@@ -1,5 +1,6 @@
 import "./itemListContainer.css";
-import { pedirDatos } from "../../utils/promiseUtils";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import ItemList from "../ItemList/ItemList";
 import Banner from "../Banner/Banner";
 import { useEffect, useState } from "react";
@@ -16,16 +17,30 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true);
     setIsError(false);
-    pedirDatos(categoriaId)
+
+    const productosRef = collection(db, "productos");
+    const queryFilter = categoriaId
+      ? query(productosRef, where("categoria", "==", categoriaId))
+      : productosRef;
+
+    getDocs(queryFilter)
       .then((res) => {
-        setProductos(res);
-        setIsLoading(false);
-        setIsError(false);
+        setProductos(
+          res.docs
+            .map((doc) => {
+              return { ...doc.data(), id: doc.id };
+            })
+            .sort((a, b) => a.titulo.localeCompare(b.titulo))
+        );
       })
       .catch((error) => {
         console.error(error);
         setIsLoading(false);
         setIsError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setIsError(false);
       });
   }, [categoriaId, setIsLoading, setIsError]);
 
@@ -42,4 +57,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-

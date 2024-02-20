@@ -15,7 +15,7 @@ const ItemCart = ({ producto }) => {
       <div className="producto-cont-cart">
         <img
           className="carrito-producto-imagen"
-          src={producto.imagen.img1}
+          src={producto.img1}
           alt={producto.titulo}
         />
         <div className="carrito-producto-titulo carrito-detalles">

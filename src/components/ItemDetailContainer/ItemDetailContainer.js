@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { pedirDatosId } from "../../utils/promiseUtils";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import "./itemDetailContainer.css";
 import { useParams } from "react-router-dom";
 import { Spinner, SpinnerError } from "../Spinner/Spinner";
@@ -20,16 +21,19 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setIsLoading(true);
     setIsError(false);
-    pedirDatosId(itemId)
+    const docRef = doc(db, "productos", itemId);
+    getDoc(docRef)
       .then((res) => {
-        setProducto(res);
-        setIsLoading(false);
-        setIsError(false);
+        setProducto({ ...res.data(), id: res.id });
       })
       .catch((error) => {
         console.error(error);
         setIsLoading(false);
         setIsError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setIsError(false);
       });
   }, [itemId, setIsLoading, setIsError]);
 
